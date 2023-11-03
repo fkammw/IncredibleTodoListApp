@@ -49,6 +49,8 @@ Open Android Studio to check if Android 13 (Tiramisu) SDK is included in order t
 5. Look into the expanded _Android SDK Build-Tools_ entry and ensure _33.0.0_ is selected.
 6. Click "Apply" to download.
 
+Configuration
+
 After download is completed, configuration is the next-step.
 
 Configure the _ANDROID\_HOME_ environment variable
@@ -64,6 +66,8 @@ Configure the _ANDROID\_HOME_ environment variable
 2. Click on _Path_ and then _Edit_
 3. Click New and add the path to platform-tool to the list : **C:\CPRG303\Android\Sdk\platform-tools**
 
+Creating a project
+
 React Native:
 
 React Native can be set up in two ways: Expo Go Quickstart and React Native CLI Quickstart. In this document, React Native CLI will be focused.
@@ -75,6 +79,8 @@ React Native can be set up in two ways: Expo Go Quickstart and React Native CLI 
 4. Inside App.jsx file, delete all the red underline items
 5. Save the file
 
+Running
+
 After that, prepare the Android device to run a React Native Android App. Both physical and virtual Android Device are supported to emulate the device on the computer. In this document, virtual device is used as an example.
 
 Preparing virtual Android device
@@ -84,15 +90,38 @@ Preparing virtual Android device
 
 - Recommended to choose Portrait as the startup orientation when you configure the device.allow access"
 
-1. Click the Play button. If you receive Windows Security Alert, click "Allow Access" to continue.
+1. Click the Play button. 
 
-- If you receive a warning telling you unable to load script. Open IncredibleTodoListApp file location using a command prompt. Then input:
+- Open IncredibleTodoListApp file location using a command prompt. Then input:
 
     - npm run start
 
     - r
 
 Finally, you can start running the application IncredibleTodoListApp on the Android device in Android Studio.
+
+Troubleshooting
+
+When you run the project: 
+
+1. If you receive Windows Security Alert, click "Allow Access" to continue.
+
+2. If you receive a warning telling you unable to load script. Open IncredibleTodoListApp file location using a command prompt. Then input:
+
+    - npm run start
+
+    - r
+3. If you still can't get this to work, navigate to https://reactnative.dev/docs/troubleshooting. 
+
+Resources
+
+To learn more about React Native, you may take a look at the following resources:
+
+1. https://reactnative.dev/ 
+2. https://reactnative.dev/docs/environment-setup
+3. https://reactnative.dev/docs/getting-started
+
+
 
 Reference:
 
