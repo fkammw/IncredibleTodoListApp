@@ -1,32 +1,51 @@
+import React from "react";
+import { Pressable, StyleSheet,View,Text, ScrollView } from "react-native";
 
-function ToDoList() {
+function ToDoList(props) {
+    
+    const {tasks} = props;
 
+    const components = tasks.map(function(task, index){
+        return (
+            <React.Fragment key={index}>
+            <Pressable>
+            <View style = {[styles.task]}>
+                <Text style = {styles.taskText}>{task}</Text>
+            </View>
+            </Pressable>
+            </React.Fragment>
+        )
+    }
+       
+    )
     return (
-        <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+        <>
+        
+        <ScrollView>
+            {components}
+        {/* <Pressable>
+            <View style ={[styles.task, styles.completed]}>
+                <Text style = {styles.taskText}>Do laundry</Text>
+            </View>
+        </Pressable>
+
+        <Pressable>
+            <View style ={[styles.task, styles.completed]}>
+                <Text style = {styles.taskText}>Go to gyms</Text>
+            </View>
+        </Pressable>
+
+        <Pressable>
+            <View style ={[styles.task, styles.completed]}>
+                <Text style = {styles.taskText}>Walk dog</Text>
+            </View>
+        </Pressable> */}
+            
+        </ScrollView>
+        </>
     );
+
+    
 }
 
 export default ToDoList;
