@@ -15,6 +15,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from './screens/HomeScreen';
 import AboutScreen from './screens/AboutScreen';
+import ChuckFact from './ChuckFact';
 
 const Stack = createStackNavigator();
 
